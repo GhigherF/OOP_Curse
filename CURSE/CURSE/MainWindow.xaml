@@ -1,0 +1,163 @@
+﻿    <Window x:Class="CURSE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:local="clr-namespace:CURSE"
+ mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500" 
+        WindowStyle="None"
+         WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize"
+            AllowsTransparency="True"
+             Icon="Resources/Icon.png">
+
+
+
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:LogIn}">
+            <Grid ShowGridLines="false">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+
+
+                <Image Source="Resources/background.png" Grid.ColumnSpan="21" Grid.RowSpan="21" Grid.Column="0" Grid.Row="0"/>
+
+                <TextBox Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="11" Grid.RowSpan="3" Margin="0,10,0,20"/>
+                <TextBox Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="11" Grid.RowSpan="3" Margin="0,10,0,20"/>
+                <Button Command="{Binding DataContext.Enter, RelativeSource={RelativeSource AncestorType=Window}}" Grid.Column="8" Grid.Row="14" Grid.ColumnSpan="5" Grid.RowSpan="2">ХУЙ</Button>
+                <TextBlock Grid.Column="8" Grid.ColumnSpan="5" Grid.Row="16"  MouseLeftButtonUp="RegisterTextBlock_MouseLeftButtonUp">
+    регистрация
+                </TextBlock>
+                <!--Верхняя панелька -->
+                <Border Background="Brown" Grid.ColumnSpan="21" Grid.RowSpan="2"  MouseLeftButtonDown="Drag" BorderBrush="brown"/>
+                <TextBlock Text="MyNote" Foreground="White" VerticalAlignment="Center"  Grid.ColumnSpan="10" Grid.RowSpan="2" MouseLeftButtonDown="Drag" FontSize="20" Margin="0 0 0 4 "/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"  Grid.ColumnSpan="21" Grid.RowSpan="2">
+                    <Button Background="Brown" Content="-" FontSize="40"  Grid.RowSpan="2" Click="_"  BorderBrush="brown"/>
+                    <Button Background="Brown" Content="X" FontSize="40" Grid.RowSpan="2"  Click="X" BorderBrush="brown"/>
+                </StackPanel>
+
+                <TextBlock Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="7" Grid.RowSpan="4" Foreground="black" FontSize="60" Margin="15 0 0 0">Вход</TextBlock>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type local:Register}">
+            <Grid ShowGridLines="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="#fce584" Grid.ColumnSpan="21" Grid.RowSpan="21" Grid.Column="0" Grid.Row="0"/>
+
+                <TextBox Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="11" Grid.RowSpan="3" Margin="0,10,0,20"/>
+                <TextBox Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="11" Grid.RowSpan="3" Margin="0,10,0,20"/>
+                <TextBox Grid.Row="12" Grid.Column="5" Grid.ColumnSpan="11" Grid.RowSpan="3" Margin="0,10,0,20"/>
+                <Button Command="{Binding DataContext.Enter, RelativeSource={RelativeSource AncestorType=Window}}" Grid.Column="8" Grid.Row="15" Grid.ColumnSpan="5" Grid.RowSpan="2">ХУЙ</Button>
+                <Button Command="{Binding DataContext.LogInCommand, RelativeSource={RelativeSource AncestorType=Window}}" Grid.Column="8" Grid.ColumnSpan="5" Grid.RowSpan="2" Background="#fce584" BorderBrush="#fce584" Grid.Row="17" >вход</Button>
+                <!--Верхняя панелька -->
+                <Border Background="Brown" Grid.ColumnSpan="21" Grid.RowSpan="2"  MouseLeftButtonDown="Drag"/>
+                <TextBlock Text="MyNote" Foreground="White" VerticalAlignment="Center" Margin="0,0,0,0" Grid.ColumnSpan="10" MouseLeftButtonDown="Drag"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.ColumnSpan="21">
+                    <Button Background="Brown" Content="−" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="20" Margin="0,0,0,0" Click="_"/>
+                    <Button Background="Brown" Content="X" Width="30" Height="30" Click="X"/>
+                </StackPanel>
+
+                <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="17" Grid.RowSpan="4" Foreground="black" FontSize="60" Margin="15 0 0 0">Регистрация</TextBlock>
+
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+
+
+    <ContentControl Content="{Binding CurrentView}"/>
+</Window>
