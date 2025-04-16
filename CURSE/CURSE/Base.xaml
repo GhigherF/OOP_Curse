@@ -6,6 +6,9 @@
         WindowStyle="None" WindowStartupLocation="CenterScreen" 
         ResizeMode="CanResizeWithGrip" AllowsTransparency="True" 
         Icon="Resources/Icon.png">
+
+
+
     <Grid Background="#191919" ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -30,7 +33,20 @@
                 <Border x:Name="MovableBorder" Background="brown" Width="200" Height="30" Canvas.Left="50" Canvas.Top="50"
                         MouseLeftButtonDown="LeftClick" MouseLeftButtonUp="LeftUnclick" MouseMove="MouseMove">
                 </Border>
-                <TextBox x:Name="MovableTextBox" Background="Yellow" Width="200" Height="170" Canvas.Left="50" Canvas.Top="80"/>
+                <RichTextBox x:Name="MovableTextBox" FontSize="20"   AcceptsReturn="True"   Background="Yellow"  KeyDown="TextRedactor" Width="200" Height="170" Canvas.Left="50" Canvas.Top="80">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0"/>
+                        </Style>
+                    </RichTextBox.Resources>
+                    <RichTextBox.ContextMenu>
+                        <ContextMenu>
+                        <MenuItem Header="Хуй" Click="Bold"/>
+                            <MenuItem Header="Пизда"/>
+                            <MenuItem Header="Мама Вани"/>
+                        </ContextMenu>
+                    </RichTextBox.ContextMenu>
+                </RichTextBox>
             </Canvas>
         </ScrollViewer>
     </Grid>

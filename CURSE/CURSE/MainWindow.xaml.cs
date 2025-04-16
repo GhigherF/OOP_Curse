@@ -150,4 +150,6 @@ namespace CURSE
             remove { CommandManager.RequerySuggested -= value; }
         }
     }
+
+
     }
