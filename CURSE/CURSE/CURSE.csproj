@@ -9,13 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\background.png" />
-    <None Remove="Resources\Icon.png" />
+    <None Remove="Views\Resources\Add.png" />
+    <None Remove="Views\Resources\background.png" />
+    <None Remove="Views\Resources\Icon.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\background.png" />
-    <Resource Include="Resources\Icon.png" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\Resources\Add.png" />
+    <Resource Include="Views\Resources\background.png" />
+    <Resource Include="Views\Resources\Icon.png" />
   </ItemGroup>
 
 </Project>
