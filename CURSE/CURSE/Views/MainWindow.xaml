@@ -1,149 +1,65 @@
-﻿<Window x:Class="CURSE.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
- xmlns:local="clr-namespace:CURSE"
- mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="500" 
-        WindowStyle="None"
-         WindowStartupLocation="CenterScreen" 
-        ResizeMode="NoResize"
-            AllowsTransparency="True"
-             Icon="/Views/Resources/Icon.png">
+﻿    <Window x:Class="CURSE.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:local="clr-namespace:CURSE"
+     mc:Ignorable="d"
+            Title="MainWindow" Height="500" Width="500" 
+            WindowStyle="None"
+             WindowStartupLocation="CenterScreen" 
+            ResizeMode="NoResize"
+             xmlns:vm="clr-namespace:CURSE.ViewModels"
+            xmlns:views="clr-namespace:CURSE.Views"
+                AllowsTransparency="True"
+                 Icon="/Views/Resources/Icon.png">
+    
+        <Window.DataContext>
+            <vm:MainViewModel/>
+        </Window.DataContext>
+
+       
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <!-- Верхняя панель -->
+                <RowDefinition Height="*"/>
+                <!-- Основной контент -->
+            </Grid.RowDefinitions>
+            
+            <!--Верхняя панелька -->
+            <Border Background="#29222c" Grid.Row="0" MouseLeftButtonDown="Drag" />
+
+            <Image Source="/Views/Resources/Icon.png"
+       MouseLeftButtonDown="Drag"
+       HorizontalAlignment="Left"
+       VerticalAlignment="Center"
+       Width="25"
+       Margin="5,0,0,0"
+       Grid.Row="0" />
+
+            <TextBlock Text="KoolNotes"
+           Foreground="White"
+           VerticalAlignment="Center"
+           MouseLeftButtonDown="Drag"
+           Width="100"
+           HorizontalAlignment="Left"
+           FontSize="20"
+           Margin="32,0,0,0"
+           Grid.Row="0" />
+
+            <StackPanel Orientation="Horizontal"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Grid.Row="0">
+                <Button Background="#29222c" Content="-" FontSize="30" Click="_" Width="40" Foreground="White" BorderBrush="#29222c"/>
+                <Button Background="#29222c" Content="X" FontSize="30" Width="40" Click="X" Foreground="White" BorderBrush="#29222c"/>
+            </StackPanel>
+
+            <!-- Контент ViewModel -->
+            <ContentControl Content="{Binding CurrentView}" Grid.Row="1"/>
 
 
 
-
-    <Window.Resources>
-        <DataTemplate DataType="{x:Type local:LogIn}">
-            <Grid ShowGridLines="false">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="470"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="500"/>
-                </Grid.ColumnDefinitions>
-
-
-                <!--Верхняя панелька -->
-                <Border Background="#29222c"  Grid.Row="0"  MouseLeftButtonDown="Drag" BorderBrush="#29222c"/>
-                <Image Source="/Resources/Icon.png" MouseLeftButtonDown="Drag" HorizontalAlignment="Left" Width="25"  Margin="5 0 0 0"></Image>
-                <TextBlock Text="KoolNotes" Foreground="White" VerticalAlignment="Center" Grid.Row="0" MouseLeftButtonDown="Drag" FontSize="20" Margin="32 0 0 0"/>
-                <StackPanel Orientation="Horizontal" Grid.Row="0"  HorizontalAlignment="Right">
-                    <Button Background="#29222c" Content="-" FontSize="40" Click="_" Width="40" Foreground="White"  BorderBrush="#29222c"/>
-                    <Button Background="#29222c" Content="X" VerticalAlignment="Top" FontSize="30" Width="40"  Foreground="White" Click="X" BorderBrush="#29222c"/>
-                </StackPanel>
-
-
-                <Grid Grid.Row="1" ShowGridLines="false">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <!--3-->
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <!--10-->
-
-                    <Border Background="#191919" Grid.ColumnSpan="3" Grid.RowSpan="10"></Border>
-                    <TextBlock Grid.Row="2" Foreground="white" Margin="50,12" FontSize="20">E-mail:</TextBlock>
-                    <TextBox Grid.Row="2" Grid.Column="0" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="2"  FontStyle="Italic" Margin="80,40,80,20" />
-                    <TextBlock Grid.Row="3" Foreground="white" Margin="50,40"  Grid.RowSpan="2" FontSize="18" >Пароль:</TextBlock>
-                    <TextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="80,20,80,40" FontSize="30" FontStyle="Italic"/>
-                    <Button Grid.Row="6" Grid.Column="1" Command="{Binding DataContext.Enter, RelativeSource={RelativeSource AncestorType=Window}}" >Вход</Button>
-                    <TextBlock Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"  Foreground="white" MouseLeftButtonUp="RegisterTextBlock_MouseLeftButtonUp">
-    регистрация
-                    </TextBlock>
-
-                    <TextBlock Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="top" Foreground="White" FontSize="60" Margin="15 0 0 0">Вход</TextBlock>
-                </Grid>
-            </Grid>
-
-        </DataTemplate>
-
-
-
-
-
-
-
-        <DataTemplate DataType="{x:Type local:Register}">
-            <Grid ShowGridLines="false">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="470"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="500"/>
-                </Grid.ColumnDefinitions>
-
-
-
-                <!--Верхняя панелька -->
-                <Border Background="#29222c"  Grid.Row="0"  MouseLeftButtonDown="Drag" BorderBrush="#29222c"/>
-                <Image Source="/Resources/Icon.png" MouseLeftButtonDown="Drag" HorizontalAlignment="Left" Width="25"  Margin="5 0 0 0"></Image>
-                <TextBlock Text="KoolNotes" Foreground="White" VerticalAlignment="Center" Grid.Row="0" MouseLeftButtonDown="Drag" FontSize="20" Margin="32 0 0 0"/>
-                <StackPanel Orientation="Horizontal" Grid.Row="0"  HorizontalAlignment="Right">
-                    <Button Background="#29222c" Content="-" FontSize="40" Click="_" Width="40" Foreground="White"  BorderBrush="#29222c"/>
-                    <Button Background="#29222c" Content="X" VerticalAlignment="Top" FontSize="30" Width="40"  Foreground="White" Click="X" BorderBrush="#29222c"/>
-                </StackPanel>
-
-
-
-
-
-                <Grid Grid.Row="1" ShowGridLines="false">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <!--3-->
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <!--10-->
-
-                    <Border Background="#0f0f0b" Grid.ColumnSpan="3" Grid.RowSpan="10"></Border>
-                    <TextBlock Grid.Row="1" Foreground="white" Margin="50,30" Grid.RowSpan="2" FontSize="20">Логин:</TextBlock>
-                    <TextBox Grid.Row="1" Grid.Column="0" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="3"  FontStyle="Italic" Margin="80,60,80,50" />
-                    <TextBlock Grid.Row="3" Foreground="white" Margin="50,15"   FontSize="18" Grid.RowSpan="3" >E-mail:</TextBlock>
-                    <TextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="80,45,80,65" FontSize="30" FontStyle="Italic"/>
-                    <Button Grid.Row="7" Grid.Column="1">Регистрация</Button>
-                    <TextBlock Foreground="white" Grid.Row="5" FontSize="20" Margin="50 0 0 0">Пароль:</TextBlock>
-                    <TextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="80,35,80,75" FontSize="30" FontStyle="Italic"/>
-                    <TextBlock Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"  Foreground="white" MouseLeftButtonUp="LogInTextBlock_MouseLeftButtonUp">
-                        войти
-                    </TextBlock>
-
-                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalAlignment="Center" Foreground="White" FontSize="60" Margin="75 0 0 20">Регистрация</TextBlock>
-                </Grid>
-            </Grid>
-        </DataTemplate>
-    </Window.Resources>
-
-
-    <ContentControl Content="{Binding CurrentView}"/>
-</Window>
+        </Grid>
+    </Window>   

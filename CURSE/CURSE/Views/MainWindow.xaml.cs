@@ -10,126 +10,34 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CURSE.ViewModels;
 
 namespace CURSE
 {
 
     public partial class MainWindow : Window
     {
-        private bool isDragging = false;
-        private Point clickPosition;
-
-        private MainViewModel _viewModel;
-
-        public void RegisterTextBlock_MouseLeftButtonUp(object sender, EventArgs e)
-        {
-            if (DataContext is MainViewModel viewModel)
-            {
-                viewModel.RegisterCommand.Execute(null);
-            }
-        }
-
-        public void LogInTextBlock_MouseLeftButtonUp(object sender, EventArgs e)
-        {
-            if (DataContext is MainViewModel viewModel)
-            {
-                viewModel.LogInCommand.Execute(null);
-            }
-        }
-
-
         public MainWindow()
         {
             InitializeComponent();
-            _viewModel = new MainViewModel();
-            DataContext = _viewModel;
-            _viewModel.window(this);
+            DataContext = new MainViewModel();
         }
+
         public void Drag(object sender, MouseButtonEventArgs e)
         {
-
             this.DragMove();
         }
+
         public void X(object sender, EventArgs e)
         {
             this.Close();
         }
+
         public void _(object sender, EventArgs e)
         {
-            this.WindowState = WindowState.Minimized; // Свернуть окно
+            this.WindowState = WindowState.Minimized;
         }
+       
     }
-    public class LogIn
-    {
-        string Email;
-        string password;
-    }
-    public class Register
-    {
-        string name;
-        string Email;
-        string password;
-    }
-
-    public class MainViewModel : INotifyPropertyChanged
-    {
-        private object _currentView;
-        public object CurrentView
-        {
-            get { return _currentView; }
-            set
-            {
-                _currentView = value;
-                OnPropertyChanged(nameof(CurrentView));
-            }
-        }
-        public ICommand RegisterCommand { get; private set; }
-        public ICommand LogInCommand { get; private set; }
-        public ICommand Enter { get; private set; }
-        private MainWindow mainWindow;
-
-        public MainViewModel()
-        {
-            CurrentView = new LogIn();
-            RegisterCommand = new RelayCommand(ShowRegister);
-            LogInCommand = new RelayCommand(ShowLogin);
-            Enter = new RelayCommand(enter);
-        }
-
-
-
-        public void window(MainWindow e)
-        {
-            mainWindow = e;
-        }
-
-
-        public void enter()
-        {
-
-
-            var b = new Base();
-            b.Show();
-            mainWindow.Close();
-        }
-
-        public void ShowLogin()
-        {
-            CurrentView = new LogIn();
-        }
-
-        public void ShowRegister()
-        {
-            CurrentView = new Register();
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
 
 }

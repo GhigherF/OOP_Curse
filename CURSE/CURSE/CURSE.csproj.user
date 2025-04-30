@@ -8,5 +8,11 @@
     <Compile Update="TEST.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\LogIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Register.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

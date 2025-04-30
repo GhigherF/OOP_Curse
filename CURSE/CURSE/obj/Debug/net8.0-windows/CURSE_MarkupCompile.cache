@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\App.xaml
-31184802533
+5-2091428639
 
-82063509084
+111585730161
 1991479471810
-TEST.xaml;Views\Base.xaml;Views\MainWindow.xaml;
+TEST.xaml;Views\Base.xaml;Views\LogIn.xaml;Views\MainWindow.xaml;Views\Register.xaml;
 
 False
 

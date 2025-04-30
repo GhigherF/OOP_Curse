@@ -77,3 +77,7 @@ C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\Ba
 C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\Base.baml
 C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\LogIn.g.cs
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\Register.g.cs
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\LogIn.baml
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\Register.baml
