@@ -7,6 +7,8 @@
     using System.Threading.Tasks;
     using System.Windows.Input;
     using System.ComponentModel.DataAnnotations;
+using CURSE.Views;
+using System.Windows.Controls;
 
 
     namespace CURSE.ViewModels
@@ -97,7 +99,7 @@
                     MemberName = columnName
                 };
 
-                var results = new List<ValidationResult>();
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
                 bool isValid = Validator.TryValidateProperty(
                     GetProperty(columnName), context, results
                 );
@@ -178,7 +180,7 @@
                     _ => null
                 };
 
-                var results = new List<ValidationResult>();
+                var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
                 bool isValid = Validator.TryValidateProperty(value, context, results);
                 return isValid ? string.Empty : results.First().ErrorMessage!;
             }
@@ -198,6 +200,26 @@
 
     public class MainViewModel : INotifyPropertyChanged
     {
+        private PasswordBox? _passwordBox;
+        public void SetPasswordBox(PasswordBox passwordBox)
+        {
+            _passwordBox = passwordBox;
+        }
+        private readonly dbContext _db;
+
+        public MainViewModel(dbContext context)
+        {
+            _db = context;
+            RegisterCommand = new RelayCommand(ShowRegister);
+            LogInCommand = new RelayCommand(ShowLogin);
+            EnterCommand = new RelayCommand(Enter);
+            RegisterUser = new RelayCommand(Register);
+            Test = new RelayCommand(Testik);
+            ShowLogin(); // начальный экран
+        }
+
+
+
         public RegisterViewModel RegisterVM { get; } = new RegisterViewModel();
         public LoginViewModel LoginVM { get; } = new LoginViewModel();
         private object _currentView;
@@ -214,38 +236,75 @@
         public ICommand RegisterCommand { get; }
             public ICommand LogInCommand { get; }
             public ICommand EnterCommand { get; }
+        public ICommand RegisterUser { get; }
+        public ICommand Test { get; }
 
-            public MainViewModel()
-            {
-                RegisterCommand = new RelayCommand(ShowRegister);
-                LogInCommand = new RelayCommand(ShowLogin);
-                EnterCommand = new RelayCommand(Enter);
-
-                ShowLogin(); // начальный экран
-            }
 
             private void ShowRegister()
             {
-                CurrentView = new Views.Register(); // можно заменить на ViewModel
+            RegisterVM.Nick = "";
+            RegisterVM.Email = "";
+            RegisterVM.Password = "";
+            CurrentView = new Views.Register(); // можно заменить на ViewModel
             }
 
             private void ShowLogin()
             {
-                CurrentView = new Views.LogIn(); // можно заменить на ViewModel
+            LoginVM.Email = "";
+            LoginVM.Password = "";
+            CurrentView = new Views.LogIn(); // можно заменить на ViewModel
             }
 
-            private void Enter()
+            private void Testik()
+            {
+            var gg = new TEST();
+            gg.Show();
+            }
+
+            private void Register()
+        {
+            var User = new User {Email = RegisterVM.Email, NickName = RegisterVM.Nick, Password =BCrypt.Net.BCrypt.HashPassword(RegisterVM.Password)};
+            if (_db.Users.Select(x => x.Email).Contains(User.Email)) MessageBox.Show("На такой email аккаунт уже есть");
+            else if (_db.Users.Select(x => x.NickName).Contains(User.NickName)) MessageBox.Show("Чел с таким ником тоже есть");
+            else 
+                try
+                {
+                    _db.Users.Add(User);
+                    MessageBox.Show("Норм");
+                    RegisterVM.Email = "";
+                    RegisterVM.Nick = "";
+                    RegisterVM.Password = "";
+                    _passwordBox?.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ПИЗДЕЦ");
+                }
+            _db.SaveChanges();
+
+        }
+
+        private void Enter()
+        {
+            var user = _db.Users
+                .FirstOrDefault(u => u.Email == LoginVM.Email); 
+
+            if (user != null && BCrypt.Net.BCrypt.Verify(LoginVM.Password, user.Password))
             {
                 var b = new Base();
                 b.Show();
 
-                // Использовать событие или Messenger, а не прямой доступ к окну
                 Application.Current.Windows
                     .OfType<MainWindow>()
                     .FirstOrDefault()?.Close();
             }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль"); 
+            }
+        }
 
-            public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
             private void OnPropertyChanged(string propertyName) =>
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

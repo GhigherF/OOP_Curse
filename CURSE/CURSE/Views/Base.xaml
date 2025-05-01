@@ -9,11 +9,10 @@
         ResizeMode="CanResizeWithGrip" AllowsTransparency="True"
         Background="Transparent"
         Icon="/Views/Resources/Icon.png">
-    
-    <Window.DataContext>
-        <vm:BaseViewModel/>
-    </Window.DataContext>
 
+    <Window.DataContext>
+        <vm:BaseViewModel />
+    </Window.DataContext>
 
     <Grid Background="#191919" ShowGridLines="True">
         <Grid.RowDefinitions>
@@ -26,9 +25,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-
-
-
+        <!-- Верхняя панель с заголовком -->
         <Border Background="#29222c" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                 BorderBrush="#29222c">
             <i:Interaction.Triggers>
@@ -39,6 +36,7 @@
             <TextBlock Text="MyNote" Foreground="White" VerticalAlignment="Center" FontSize="20" Margin="10,0,0,0"/>
         </Border>
 
+        <!-- Панель слева -->
         <Border Background="#29222c" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2"
                 BorderBrush="#29222c">
             <i:Interaction.Triggers>
@@ -48,13 +46,37 @@
             </i:Interaction.Triggers>
         </Border>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1" Height="50">
-            <Button Background="#29222c" Content="-" Foreground="White" FontSize="20" Width="30"
-                    BorderBrush="#29222c" Command="{Binding MinimizeCommand}"/>
-            <Button Background="#29222c" Content="X" Foreground="White" FontSize="20" Width="30"
-                    BorderBrush="#29222c" Command="{Binding CloseCommand}"/>
-        </StackPanel>
+        <!--Верхняя панелька -->
+        <Border Background="#29222c" Grid.Row="0" MouseLeftButtonDown="Drag" />
 
+        <Image Source="/Views/Resources/Icon.png"
+MouseLeftButtonDown="Drag"
+HorizontalAlignment="Left"
+VerticalAlignment="Center"
+Width="25"
+Margin="5,0,0,0"
+Grid.Row="0" />
+
+        <TextBlock Text="KoolNotes"
+    Foreground="White"
+    VerticalAlignment="Center"
+    MouseLeftButtonDown="Drag"
+    Width="100"
+    HorizontalAlignment="Left"
+    FontSize="20"
+    Margin="32,0,0,0"
+    Grid.Row="0" />
+
+        <StackPanel Orientation="Horizontal"
+     HorizontalAlignment="Right"
+     VerticalAlignment="Top"
+     Grid.Row="0">
+            <Button Background="#29222c" Content="-" FontSize="30" Click="_" Width="40" Foreground="White" BorderBrush="#29222c"/>
+            <Button Background="#29222c" Content="X" FontSize="30" Width="40" Click="X" Foreground="White" BorderBrush="#29222c"/>
+        </StackPanel>
+       
+
+        <!-- Кнопка добавления элемента -->
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Image Source="/Views/Resources/Add.png" Cursor="Hand">
                 <i:Interaction.Triggers>
@@ -65,6 +87,7 @@
             </Image>
         </StackPanel>
 
+        <!-- Содержимое с прокруткой -->
         <ScrollViewer x:Name="MainScrollViewer" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                       VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="100,0,0,0">
             <Canvas x:Name="Note" Background="Transparent" Width="680" Height="1500">
@@ -78,33 +101,27 @@
                         <DataTemplate>
                             <Canvas>
                                 <Border Width="200" Height="200"
-                Canvas.Left="50" Canvas.Top="50"
-                Background="Transparent">
+                                        Canvas.Left="50" Canvas.Top="50"
+                                        Background="Transparent">
                                     <i:Interaction.Behaviors>
-                                        <vm:CanvasDragBehavior/>
+                                        <vm:CanvasDragBehavior />
                                     </i:Interaction.Behaviors>
 
                                     <Grid>
-                                        <Grid>
-                                            <Border Height="30" Background="Brown" VerticalAlignment="Top"/>
-                                            <RichTextBox x:Name="MyRichTextBox" FontSize="20" AcceptsReturn="True" Background="Yellow" Margin="0,30,0,0">
-                                                <RichTextBox.ContextMenu>
-                                                    <ContextMenu>
-                                                        <MenuItem Header="Жирный" 
-Command="{Binding ToggleBoldCommand}" 
-CommandParameter="{Binding PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}"/>
-
-                                                    </ContextMenu>
-                                                </RichTextBox.ContextMenu>
-                                            </RichTextBox>
-                                        </Grid>
+                                        <Border Height="30" Background="Brown" VerticalAlignment="Top"/>
+                                        <RichTextBox x:Name="MyRichTextBox" FontSize="20" AcceptsReturn="True" Background="Yellow" Margin="0,30,0,0">
+                                            <RichTextBox.ContextMenu>
+                                                <ContextMenu>
+                                                    <MenuItem Header="Жирный" Command="{Binding ToggleBoldCommand}"
+                                                              CommandParameter="{Binding PlacementTarget, RelativeSource={RelativeSource AncestorType=ContextMenu}}"/>
+                                                </ContextMenu>
+                                            </RichTextBox.ContextMenu>
+                                        </RichTextBox>
                                     </Grid>
                                 </Border>
                             </Canvas>
                         </DataTemplate>
-
                     </ItemsControl.ItemTemplate>
-
                 </ItemsControl>
             </Canvas>
         </ScrollViewer>

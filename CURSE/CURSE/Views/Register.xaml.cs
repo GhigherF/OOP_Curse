@@ -25,17 +25,22 @@ namespace CURSE.Views
         {
             InitializeComponent();
         }
+        private PasswordBox _passwordBox;
+
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             if (DataContext is MainViewModel vm && sender is PasswordBox pb)
             {
                 vm.RegisterVM.Password = pb.Password;
 
-                // Вручную запустить проверку свойства Password
-                var propName = nameof(vm.RegisterVM.Password);
+                // Привязка PasswordBox к VM для возможности очистки
+                vm.SetPasswordBox(pb);
+
+                // Запуск валидации, если нужна (через Tag, например)
                 var binding = BindingOperations.GetBindingExpression(pb, PasswordBox.TagProperty);
                 binding?.UpdateSource();
             }
         }
+
     }
 }

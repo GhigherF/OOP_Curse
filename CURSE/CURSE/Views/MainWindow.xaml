@@ -14,9 +14,7 @@
                 AllowsTransparency="True"
                  Icon="/Views/Resources/Icon.png">
     
-        <Window.DataContext>
-            <vm:MainViewModel/>
-        </Window.DataContext>
+        
 
        
         <Grid>

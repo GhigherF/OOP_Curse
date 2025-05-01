@@ -20,7 +20,6 @@ namespace CURSE
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
         }
 
         public void Drag(object sender, MouseButtonEventArgs e)

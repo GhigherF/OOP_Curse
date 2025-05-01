@@ -16,31 +16,6 @@ using System.ComponentModel.DataAnnotations;
 namespace CURSE.ViewModels
 {
     ///Behaviors
-    public static class ContextMenuHelper
-    {
-        public static T? GetPlacementTargetFromContextMenu<T>(object sender) where T : class
-        {
-            if (sender is DependencyObject depObj)
-            {
-                var contextMenu = FindVisualParent<ContextMenu>(depObj);
-                return contextMenu?.PlacementTarget as T;
-            }
-
-            return null;
-        }
-
-        public static T? FindVisualParent<T>(DependencyObject child) where T : DependencyObject
-        {
-            DependencyObject parent = VisualTreeHelper.GetParent(child);
-
-            while (parent != null && parent is not T)
-            {
-                parent = VisualTreeHelper.GetParent(parent);
-            }
-
-            return parent as T;
-        }
-    }
     public class CanvasDragBehavior : Behavior<FrameworkElement>
     {
         private bool isDragging = false;

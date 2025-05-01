@@ -53,7 +53,7 @@ namespace CURSE {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CURSE;V1.0.0.0;component/test.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CURSE;component/test.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TEST.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

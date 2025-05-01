@@ -88,7 +88,7 @@
 
             <Button Grid.Row="6" Grid.Column="1"
                     Content="Вход"
-                    Command="{Binding LoginVM.EnterCommand}" 
+                    Command="{Binding EnterCommand}" 
                     IsEnabled="{Binding LoginVM.CanLogin}" />
 
             <TextBlock Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White">
