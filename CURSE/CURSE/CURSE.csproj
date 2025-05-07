@@ -18,6 +18,7 @@
     <None Remove="Views\Resources\Add.png" />
     <None Remove="Views\Resources\background.png" />
     <None Remove="Views\Resources\Icon.png" />
+    <None Remove="Views\Resources\Снимок экрана 2025-05-05 113040.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +38,9 @@
     <Resource Include="Views\Resources\Add.png" />
     <Resource Include="Views\Resources\background.png" />
     <Resource Include="Views\Resources\Icon.png" />
+    <Resource Include="Views\Resources\Снимок экрана 2025-05-05 113040.png" />
   </ItemGroup>
+
+
 
 </Project>
