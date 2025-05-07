@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\base.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\baselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\baselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\base.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\base.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\baselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\baselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,16 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:965134208:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -46,27 +38,35 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:965134208:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BaseLogic.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\BaseLogic.cs",
               "RelativeDocumentMoniker": "CURSE\\ViewModels\\BaseLogic.cs",
               "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\BaseLogic.cs",
               "RelativeToolTip": "CURSE\\ViewModels\\BaseLogic.cs",
-              "ViewState": "AgIAAA4BAAAAAAAAAIBAwBgBAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T15:59:34.353Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Base.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Base.xaml.cs",
               "RelativeDocumentMoniker": "CURSE\\Views\\Base.xaml.cs",
               "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Base.xaml.cs",
               "RelativeToolTip": "CURSE\\Views\\Base.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T12:12:31.166Z",
               "EditorCaption": ""

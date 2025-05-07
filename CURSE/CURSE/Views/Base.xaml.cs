@@ -58,7 +58,7 @@ namespace CURSE.Views
         {
             if (sender is ScrollViewer sv)
             {
-                const double scrollStep = 50; // Меньше — медленнее
+                const double scrollStep = 40; // Меньше — медленнее
                 double newOffset = sv.VerticalOffset - Math.Sign(e.Delta) * scrollStep;
 
                 newOffset = Math.Max(0, Math.Min(newOffset, sv.ExtentHeight - sv.ViewportHeight));

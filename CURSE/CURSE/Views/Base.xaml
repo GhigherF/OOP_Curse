@@ -12,9 +12,9 @@
 
         <Window.Resources>
             <ControlTemplate x:Key="ResizeThumbTemplate" TargetType="Thumb">
-                <Grid Width="{TemplateBinding Width}"
-              Height="{TemplateBinding Height}"
-              Background="#01000000">
+                <Grid
+             
+              Background="#01000000" Cursor="">
                     <!-- НЕ Transparent, иначе может не ловить мышь -->
                     <!-- Нижний правый угол, как у окон -->
                     <Path Data="M0,10 L10,10 10,0" 
@@ -71,10 +71,10 @@
                             <DataTemplate>
                             <Canvas>
                                 <Grid x:Name="NoteContainer"
+                                       Canvas.Left="{Binding X}"
+   Canvas.Top="{Binding Y}"
               Width="200"
               Height="180"
-              Canvas.Left="50"
-              Canvas.Top="50"
               Background="Transparent"
               HorizontalAlignment="Left"
               VerticalAlignment="Top">

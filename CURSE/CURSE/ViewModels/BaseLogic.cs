@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.Xaml.Behaviors;
+using System.Runtime.CompilerServices;
 
 namespace CURSE.ViewModels
 {
@@ -74,7 +75,7 @@ namespace CURSE.ViewModels
             double newTop = mousePositionOnCanvas.Y - clickOffset.Y;
 
             // Ограничения прокрутки
-            double scrollMargin = 20;
+            double scrollMargin = 5;
 
             if (scrollViewer != null)
             {
@@ -230,12 +231,46 @@ namespace CURSE.ViewModels
 
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public class Note
+        public class Note : INotifyPropertyChanged
         {
             public string Title { get; set; }
-            public double X { get; set; }
-            public double Y { get; set; }
+
+            private double _x;
+            public double X
+            {
+                get => _x;
+                set
+                {
+                    if (_x != value)
+                    {
+                        _x = value;
+                        OnPropertyChanged(nameof(X));
+                    }
+                }
+            }
+
+            private double _y;
+            public double Y
+            {
+                get => _y;
+                set
+                {
+                    if (_y != value)
+                    {
+                        _y = value;
+                        OnPropertyChanged(nameof(Y));
+                    }
+                }
+            }
+
+            public event PropertyChangedEventHandler PropertyChanged;
+
+            protected void OnPropertyChanged(string propertyName)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
+
         private readonly Window _window;
         private ScrollViewer? _scrollViewer;
 
@@ -257,16 +292,29 @@ namespace CURSE.ViewModels
         {
             if (_scrollViewer == null) return;
 
-            double centerX = _scrollViewer.HorizontalOffset + _scrollViewer.ViewportWidth / 2 - 100; // 100 = половина ширины заметки
-            double centerY = _scrollViewer.VerticalOffset + _scrollViewer.ViewportHeight / 2 - 90;  // 90 = половина высоты заметки
+            // Получаем текущие параметры прокрутки
+            double horizontalOffset = _scrollViewer.HorizontalOffset;
+            double verticalOffset = _scrollViewer.VerticalOffset;
+            double viewportWidth = _scrollViewer.ViewportWidth;
+            double viewportHeight = _scrollViewer.ViewportHeight;
 
-            Notes.Add(new Note
+            // Рассчитываем центр видимой области
+            double centerX = horizontalOffset + (viewportWidth / 2) - 100; // 100 - половина ширины заметки
+            double centerY = verticalOffset + (viewportHeight / 2) - 90;   // 90 - половина высоты заметки
+
+            // Создаем новую заметку и добавляем её в коллекцию
+            var newNote = new Note
             {
                 Title = $"Новая заметка {Notes.Count + 1}",
                 X = centerX,
                 Y = centerY
-            });
+            };
+
+            Notes.Add(newNote);
         }
+
+
+
 
         private void ToggleBold()
         {
