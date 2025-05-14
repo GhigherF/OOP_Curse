@@ -3,122 +3,82 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
             xmlns:local="clr-namespace:CURSE"
+            xmlns:v="clr-namespace:CURSE.Views"
             xmlns:vm="clr-namespace:CURSE.ViewModels"
             Title="MainWindow" Height="600" Width="800"
             WindowStyle="None" WindowStartupLocation="CenterScreen"
             ResizeMode="CanResizeWithGrip" AllowsTransparency="True"
             Background="Transparent"
             Icon="/Views/Resources/Icon.png">
-
+    
         <Window.Resources>
-            <ControlTemplate x:Key="ResizeThumbTemplate" TargetType="Thumb">
-                <Grid
-             
-              Background="#01000000" Cursor="">
-                    <!-- НЕ Transparent, иначе может не ловить мышь -->
-                    <!-- Нижний правый угол, как у окон -->
-                    <Path Data="M0,10 L10,10 10,0" 
-                  Stroke="DarkGray"
-                  StrokeThickness="2"
-                  Stretch="None"
-                  HorizontalAlignment="Right"
-                  VerticalAlignment="Bottom"/>
-                    <Path Data="M0,10 L10,10 10,0" 
-                  Stroke="White"
-                  StrokeThickness="1"
-                  Stretch="None"
-                  HorizontalAlignment="Right"
-                  VerticalAlignment="Bottom"/>
-                </Grid>
-            </ControlTemplate>
+            <DataTemplate DataType="{x:Type vm:CommunityNotesViewModel}">
+                <v:CommunityNotes/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:CanvasNotesViewModel}">
+                <v:Notes/>
+            </DataTemplate>
         </Window.Resources>
 
         <Grid Background="#191919" ShowGridLines="True">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200" MinWidth="50" MaxWidth="350"/>
                 <ColumnDefinition Width="5"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="40"/>
+            
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <!-- Левая панель -->
-            <Border Background="#29222c" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" BorderBrush="#29222c" />
+            <Border Background="#29222c" Grid.Row="1" Grid.Column="0" BorderBrush="#29222c">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                    <Button Content="Community"
+                    Command="{Binding SwitchToCommunityCommand}"
+                    Margin="10 15 10 10 "
+                    Padding="5"
+                    Foreground="White"
+                    Background="#3A3A3A"
+                    BorderBrush="#444"
+                    FontWeight="Bold"/>
+                    <TextBlock Background="red" Height="2"/>
+
+                <Button Command="{Binding AddCanvasCommand}"
+        Background="Transparent"
+        BorderThickness="0"
+        Padding="0"
+        HorizontalAlignment="Center"
+        Cursor="Hand">
+                    <Image Source="/Views/Resources/Plus.png" Width="30"/>
+                </Button>
+                <Button Content="Canvas"    
+                    Command="{Binding SwitchToCanvasCommand}"
+                   Margin="10 15 10 10 "
+                    Padding="5"
+                    Foreground="White"
+                    Background="#3A3A3A"
+                    BorderBrush="#444"
+                    FontWeight="Bold"/>
+                </StackPanel>
+            </Border>
 
             <!-- Разделитель -->
             <GridSplitter Grid.Column="1" Grid.Row="2" 
                           HorizontalAlignment="Center" 
                           VerticalAlignment="Stretch"
-                          Background="Yellow" Width="5"/>
-
-            <!-- ScrollViewer с Notes -->
-            <ScrollViewer x:Name="MainScrollViewer" 
-                          Grid.Row="2" Grid.Column="2"
-                          VerticalScrollBarVisibility="Auto" 
-                          HorizontalScrollBarVisibility="Auto" 
-                          Margin="10,0,10,10">
-                <Canvas x:Name="Note" Background="Transparent" Width="680" Height="1500">
-                    <ItemsControl ItemsSource="{Binding Notes}">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <Canvas />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                            <Canvas>
-                                <Grid x:Name="NoteContainer"
-                                       Canvas.Left="{Binding X}"
-   Canvas.Top="{Binding Y}"
-              Width="200"
-              Height="180"
-              Background="Transparent"
-              HorizontalAlignment="Left"
-              VerticalAlignment="Top">
-                                    <i:Interaction.Behaviors>
-                                        <vm:CanvasDragBehavior />
-                                    </i:Interaction.Behaviors>
-                                    <!-- Верхняя панель -->
-                                    <Border Height="30" Background="Brown" VerticalAlignment="Top"/>
-                                  
-
-                                    <!-- Редактор -->
-                                    <RichTextBox x:Name="MyRichTextBox" FontSize="20" AcceptsReturn="True" Background="Yellow" Margin="0,30,0,0" IsDocumentEnabled="True">
-                                        <i:Interaction.Behaviors>
-                                            <vm:RichTextBoxKeyBehavior />
-                                            <vm:DisableParentScrollOnFocusBehavior />
-                                        </i:Interaction.Behaviors>
-                                        <RichTextBox.Resources>
-                                            <Style TargetType="Paragraph">
-                                                <Setter Property="Margin" Value="0"/>
-                                            </Style>
-                                        </RichTextBox.Resources>
-                                    </RichTextBox>
-
-                                    <!-- Уголок для растягивания -->
-                                    <Thumb x:Name="ResizeThumb"
-                   Width="15"
-                   Height="15"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Cursor="SizeNWSE"
-                   DragDelta="ResizeThumb_DragDelta"
-                   Template="{StaticResource ResizeThumbTemplate}"
-                   Panel.ZIndex="10"/>
-                                </Grid>
-                            </Canvas>
-                        </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </Canvas>
-            </ScrollViewer>
+                          Background="Yellow" Width="5"
+                          ResizeBehavior="PreviousAndNext"
+                          ResizeDirection="Columns" Cursor="SizeWE"
+                          />
+    <ContentControl Content="{Binding CurrentViewModel}" Grid.Row="2" Grid.Column="2" />
+       
+    
 
             <!-- Верхняя панель -->
             <Border Background="#29222c" Grid.Row="0" Grid.ColumnSpan="3" MouseLeftButtonDown="Drag" />
-
             <Image Source="/Views/Resources/Icon.png"
                    MouseLeftButtonDown="Drag"
                    HorizontalAlignment="Left"
@@ -126,8 +86,7 @@
                    Width="25"
                    Margin="5,0,0,0"
                    Grid.Row="0" />
-
-            <TextBlock Text="KoolNotes"
+            <TextBlock Text="{Binding NickName}"
                        Foreground="White"
                        VerticalAlignment="Center"
                        MouseLeftButtonDown="Drag"
@@ -137,31 +96,12 @@
                        Margin="32,0,0,0"
                        Grid.Row="0"
                        Grid.ColumnSpan="2"/>
-
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top"
                         Grid.Row="0" Grid.Column="2">
                 <Button Background="#29222c" Content="-" FontSize="30" Click="_" Width="40" Foreground="White" BorderBrush="#29222c"/>
                 <Button Background="#29222c" Content="X" FontSize="30" Width="40" Click="X" Foreground="White" BorderBrush="#29222c"/>
-            </StackPanel>
-
-            <!-- Кнопка добавления элемента -->
-            <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Image Source="/Views/Resources/Add.png" Cursor="Hand">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="MouseLeftButtonDown">
-                            <i:InvokeCommandAction Command="{Binding AddItemCommand}" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </Image>
-                <Image Source="/Views/Resources/Снимок экрана 2025-05-05 113040.png">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="MouseLeftButtonDown">
-                            <i:InvokeCommandAction Command="{Binding ToggleBoldCommand}" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </Image>
             </StackPanel>
         </Grid>
     </Window>

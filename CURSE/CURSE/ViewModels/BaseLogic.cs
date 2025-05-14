@@ -1,16 +1,18 @@
 ﻿using System;
-using System.Runtime.InteropServices;
-using System.Windows;       // Для WPF-элементов
-using Microsoft.Windows;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.Xaml.Behaviors;
-using System.Runtime.CompilerServices;
+using CURSE.Views;
+using System.Diagnostics;
+using System.Windows.Media.Imaging;
+using System.IO;
 
 namespace CURSE.ViewModels
 {
@@ -124,7 +126,6 @@ namespace CURSE.ViewModels
             return null;
         }
     }
-
     public class DisableParentScrollOnFocusBehavior : Behavior<RichTextBox>
     {
         private ScrollViewer _scrollViewer;
@@ -146,7 +147,6 @@ namespace CURSE.ViewModels
 
         private void OnRichTextBoxLoaded(object sender, RoutedEventArgs e)
         {
-            // Кешируем ScrollViewer один раз при загрузке
             _scrollViewer = FindScrollViewer(AssociatedObject);
             _isScrollViewerCached = true;
         }
@@ -172,13 +172,64 @@ namespace CURSE.ViewModels
                 ? _scrollViewer.VerticalOffset > 0
                 : _scrollViewer.VerticalOffset < _scrollViewer.ExtentHeight - _scrollViewer.ViewportHeight;
 
-            // Если можем скроллить - позволяем работать нативному механизму
             if (canScroll) return;
-
-            // Если достигли границы - блокируем всплытие
             e.Handled = true;
         }
     }
+
+    public class DisableParentScrollOnHoverBehavior : Behavior<TextBlock>
+    {
+        private ScrollViewer? _scrollViewer;
+        private bool _isScrollViewerCached;
+
+        protected override void OnAttached()
+        {
+            base.OnAttached();
+            AssociatedObject.Loaded += OnLoaded;
+            AssociatedObject.PreviewMouseWheel += OnPreviewMouseWheel;
+        }
+
+        protected override void OnDetaching()
+        {
+            base.OnDetaching();
+            AssociatedObject.Loaded -= OnLoaded;
+            AssociatedObject.PreviewMouseWheel -= OnPreviewMouseWheel;
+        }
+
+        private void OnLoaded(object sender, RoutedEventArgs e)
+        {
+            if (_isScrollViewerCached) return;
+
+            _scrollViewer = FindScrollViewer(AssociatedObject);
+            _isScrollViewerCached = true;
+        }
+
+        private void OnPreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if (!_isScrollViewerCached || _scrollViewer == null) return;
+
+            bool isScrollingUp = e.Delta > 0;
+            bool canScroll = isScrollingUp
+                ? _scrollViewer.VerticalOffset > 0
+                : _scrollViewer.VerticalOffset < _scrollViewer.ExtentHeight - _scrollViewer.ViewportHeight;
+
+            if (canScroll) return;
+            e.Handled = true;
+        }
+
+        private ScrollViewer? FindScrollViewer(DependencyObject parent)
+        {
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                if (child is ScrollViewer sv) return sv;
+                var result = FindScrollViewer(child);
+                if (result != null) return result;
+            }
+            return null;
+        }
+    }
+
     public class RichTextBoxKeyBehavior : Behavior<RichTextBox>
     {
         public static readonly DependencyProperty KeyCommandProperty =
@@ -209,131 +260,204 @@ namespace CURSE.ViewModels
             if (e.Key == Key.Enter)
             {
                 e.Handled = true;
-                rtb.CaretPosition.InsertLineBreak(); // Вставляет LineBreak
+                rtb.CaretPosition.InsertLineBreak();
             }
             else if (e.Key == Key.Tab)
             {
                 e.Handled = true;
-                rtb.CaretPosition.InsertTextInRun("    "); // Вставляет 4 пробела
+                rtb.CaretPosition.InsertTextInRun("    ");
             }
         }
     }
 
+    public class PasteImageBehavior : Behavior<RichTextBox>
+    {
+        protected override void OnAttached()
+        {
+            base.OnAttached();
+            AssociatedObject.PreviewKeyDown += AssociatedObject_PreviewKeyDown;
+        }
 
+        private void AssociatedObject_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.V && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+            {
+                var rtb = AssociatedObject;
 
+                // Вставка из буфера как изображения
+                if (Clipboard.ContainsImage())
+                {
+                    var image = Clipboard.GetImage();
+                    if (image != null)
+                    {
+                        InsertImage(rtb, image);
+                        e.Handled = true;
+                    }
+                }
 
+                // Вставка из буфера как файла изображения
+                else if (Clipboard.ContainsFileDropList())
+                {
+                    var files = Clipboard.GetFileDropList();
+                    if (files.Count > 0)
+                    {
+                        var path = files[0];
+                        if (File.Exists(path))
+                        {
+                            var bitmap = new BitmapImage();
+                            using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                            {
+                                bitmap.BeginInit();
+                                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                                bitmap.StreamSource = stream;
+                                bitmap.EndInit();
+                            }
 
+                            InsertImage(rtb, bitmap);
+                            e.Handled = true;
+                        }
+                    }
+                }
+            }
+        }
 
+        private void InsertImage(RichTextBox rtb, BitmapSource imageSource)
+        {
+            var imageControl = new Image
+            {
+                Source = imageSource,
+                Width = imageSource.Width,
+                Stretch = System.Windows.Media.Stretch.Uniform
+            };
 
+            var container = new InlineUIContainer(imageControl, rtb.CaretPosition);
+            rtb.CaretPosition = container.ElementEnd;
+            rtb.Focus();
+        }
 
+        protected override void OnDetaching()
+        {
+            base.OnDetaching();
+            AssociatedObject.PreviewKeyDown -= AssociatedObject_PreviewKeyDown;
+        }
+    }
 
+    public class SmallNote : INotifyPropertyChanged
+    {
+        private string _content;
+        public string Content
+        {
+            get => _content;
+            set { if (_content != value) { _content = value; OnPropertyChanged(); } }
+        }
 
+        private double _x;
+        public double X
+        {
+            get => _x;
+            set { if (_x != value) { _x = value; OnPropertyChanged(); } }
+        }
+
+        private double _y;
+        public double Y
+        {
+            get => _y;
+            set { if (_y != value) { _y = value; OnPropertyChanged(); } }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "") =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    public class NoteCanvas
+    {
+        public Guid Id { get; } = Guid.NewGuid();
+        public string Title { get; set; }
+        public ObservableCollection<SmallNote> Notes { get; set; } = new ObservableCollection<SmallNote>();
+    }
+
+    public class Community
+    {
+        public int Id { get; set; }
+        public string Nickname { get; set; }
+        public DateTime SelectedDate { get; set; } = DateTime.Today;
+        public string Text { get; set; } = string.Empty;
+    }
 
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public class Note : INotifyPropertyChanged
+        private NoteCanvas _selectedCanvas;
+        public ObservableCollection<NoteCanvas> Canvases { get; set; } = new ObservableCollection<NoteCanvas>();
+        public NoteCanvas SelectedCanvas
         {
-            public string Title { get; set; }
-
-            private double _x;
-            public double X
+            get => _selectedCanvas;
+            set
             {
-                get => _x;
-                set
+                if (_selectedCanvas != value)
                 {
-                    if (_x != value)
-                    {
-                        _x = value;
-                        OnPropertyChanged(nameof(X));
-                    }
+                    _selectedCanvas = value;
+                    OnPropertyChanged(nameof(SelectedCanvas));
                 }
             }
-
-            private double _y;
-            public double Y
+        }
+        public ScrollViewer MainScrollViewer { get; set; }
+        private string _nickName;
+        public string NickName
+        {
+            get => _nickName;
+            set
             {
-                get => _y;
-                set
+                if (_nickName != value)
                 {
-                    if (_y != value)
-                    {
-                        _y = value;
-                        OnPropertyChanged(nameof(Y));
-                    }
+                    _nickName = value;
+                    OnPropertyChanged(nameof(NickName));
                 }
-            }
-
-            public event PropertyChangedEventHandler PropertyChanged;
-
-            protected void OnPropertyChanged(string propertyName)
-            {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
-        private readonly Window _window;
-        private ScrollViewer? _scrollViewer;
-
-        public ObservableCollection<Note> Notes { get; }
-        public ICommand AddItemCommand { get; }
-        public ICommand ToggleBoldCommand { get; }
-        public ICommand NoteKeyDownCommand { get; }
-
-        public BaseViewModel(Window window, ScrollViewer? scrollViewer)
+        private object _currentViewModel;
+        public object CurrentViewModel
         {
-            _window = window;
-            _scrollViewer = scrollViewer;
-            Notes = new ObservableCollection<Note>();
-            AddItemCommand = new RelayCommand(AddNote);
-            ToggleBoldCommand = new RelayCommand(ToggleBold);
+            get => _currentViewModel;
+            set
+            {
+                _currentViewModel = value;
+                OnPropertyChanged(nameof(CurrentViewModel));
+            }
+        }
+           public ScrollViewer ScrollViewer { get; set; }
+        public ICommand SwitchToCommunityCommand { get; }
+        public ICommand SwitchToCanvasCommand { get; }
+        public ICommand AddCanvasCommand { get; }
+
+        public BaseViewModel(Window window, string nickname)
+        {
+            AddCanvasCommand = new RelayCommand(AddCanvas);
+            AddCanvas();
+            AddCanvas();
+            NickName = nickname;
+
+            SwitchToCommunityCommand = new RelayCommand(() =>
+                CurrentViewModel = new CommunityNotesViewModel(NickName));
+
+            SwitchToCanvasCommand = new RelayCommand(() =>
+                CurrentViewModel = new CanvasNotesViewModel());
+
+            CurrentViewModel = new CommunityNotesViewModel(NickName);
         }
 
-        private void AddNote()
+        private void AddCanvas()
         {
-            if (_scrollViewer == null) return;
-
-            // Получаем текущие параметры прокрутки
-            double horizontalOffset = _scrollViewer.HorizontalOffset;
-            double verticalOffset = _scrollViewer.VerticalOffset;
-            double viewportWidth = _scrollViewer.ViewportWidth;
-            double viewportHeight = _scrollViewer.ViewportHeight;
-
-            // Рассчитываем центр видимой области
-            double centerX = horizontalOffset + (viewportWidth / 2) - 100; // 100 - половина ширины заметки
-            double centerY = verticalOffset + (viewportHeight / 2) - 90;   // 90 - половина высоты заметки
-
-            // Создаем новую заметку и добавляем её в коллекцию
-            var newNote = new Note
+            MessageBox.Show("gg");
+            var newCanvas = new NoteCanvas
             {
-                Title = $"Новая заметка {Notes.Count + 1}",
-                X = centerX,
-                Y = centerY
+                Title = $"canvas {Canvases.Count + 1}"
             };
-
-            Notes.Add(newNote);
+            Canvases.Add(newCanvas);
+            SelectedCanvas = newCanvas;
         }
 
-
-
-
-        private void ToggleBold()
-        {
-            if (Keyboard.FocusedElement is RichTextBox rtb)
-            {
-                var selection = rtb.Selection;
-                if (!selection.IsEmpty)
-                {
-                    var weight = selection.GetPropertyValue(TextElement.FontWeightProperty);
-                    var newWeight = (weight is FontWeight w && w == FontWeights.Bold)
-                        ? FontWeights.Normal
-                        : FontWeights.Bold;
-
-                    selection.ApplyPropertyValue(TextElement.FontWeightProperty, newWeight);
-                }
-
-                rtb.Focus(); // Обновляет фокус, если нужно
-            }
-        }
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName) =>

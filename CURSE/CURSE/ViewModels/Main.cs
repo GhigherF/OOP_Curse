@@ -200,6 +200,20 @@ using System.Windows.Controls;
 
     public class MainViewModel : INotifyPropertyChanged
     {
+        private string _nickName; // Добавляем переменную для никнейма
+
+        public string NickName
+        {
+            get => _nickName;
+            set
+            {
+                if (_nickName != value)
+                {
+                    _nickName = value;
+                    OnPropertyChanged(nameof(NickName)); // уведомляем об изменении
+                }
+            }
+        }
         private PasswordBox? _passwordBox;
         public void SetPasswordBox(PasswordBox passwordBox)
         {
@@ -287,11 +301,13 @@ using System.Windows.Controls;
         private void Enter()
         {
             var user = _db.Users
-                .FirstOrDefault(u => u.Email == LoginVM.Email); 
+                .FirstOrDefault(u => u.Email == LoginVM.Email);
 
             if (user != null && BCrypt.Net.BCrypt.Verify(LoginVM.Password, user.Password))
             {
-                var b = new Base();
+                NickName = user.NickName;
+
+                var b = new Base(NickName);
                 b.Show();
 
                 Application.Current.Windows
@@ -300,10 +316,9 @@ using System.Windows.Controls;
             }
             else
             {
-                MessageBox.Show("Неверный логин или пароль"); 
+                MessageBox.Show("Неверный логин или пароль");
             }
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
             private void OnPropertyChanged(string propertyName) =>
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

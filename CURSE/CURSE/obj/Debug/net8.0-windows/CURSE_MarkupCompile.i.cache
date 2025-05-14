@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\App.xaml
-5-2091428639
+9-1018512433
 
-17-1499647087
+291967695471
 236-1339247649
-TEST.xaml;Views\Base.xaml;Views\LogIn.xaml;Views\MainWindow.xaml;Views\Register.xaml;
+TEST.xaml;Views\Base.xaml;Views\BigNote.xaml;Views\CommunityNoteContextMenu.xaml;Views\CommunityNotes.xaml;Views\LogIn.xaml;Views\MainWindow.xaml;Views\Notes.xaml;Views\Register.xaml;
 
 True
 

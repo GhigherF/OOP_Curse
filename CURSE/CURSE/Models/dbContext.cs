@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CURSE.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 public class User
@@ -12,6 +13,7 @@ public class User
     public string NickName { get; set; }
 }
 
+
 public class dbContext : DbContext
 {
     public dbContext() { } // Добавьте конструктор без параметров
@@ -20,6 +22,8 @@ public class dbContext : DbContext
     {
     }
     public DbSet<User> Users { get; set; }
+    public DbSet<Community> Community{ get; set; }
+    //public DbSet<private_notes> Community { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

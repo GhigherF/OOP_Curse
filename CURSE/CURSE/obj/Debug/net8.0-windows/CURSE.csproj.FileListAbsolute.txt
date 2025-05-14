@@ -213,3 +213,11 @@ C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\bin\Debug\net8.0-windows\runtimes
 C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\ghigher\Desktop\OOP_Curse\CURSE\Curse\bin\Debug\net8.0-windows\appsettings.json
 C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\BigNote.g.cs
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\Notes.g.cs
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\BigNote.baml
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\Notes.baml
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\CommunityNotes.g.cs
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\CommunityNotes.baml
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\CommunityNoteContextMenu.g.cs
+C:\Users\ghigher\Desktop\OOP_Curse\CURSE\CURSE\obj\Debug\net8.0-windows\Views\CommunityNoteContextMenu.baml

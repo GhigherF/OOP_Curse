@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="CURSE.Views.CommunityNotes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors" 
+             xmlns:local="clr-namespace:CURSE.ViewModels"
+             xmlns:conv="clr-namespace:CURSE.Converter"
+             mc:Ignorable="d" 
+             xmlns:vm="clr-namespace:CURSE.ViewModels"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <conv:NicknameMatchToVisibilityConverter x:Key="NicknameMatchConverter"/>
+    </UserControl.Resources>
+    
+    <Grid>
+        
+        <ScrollViewer x:Name="NotesScrollViewer"
+              VerticalScrollBarVisibility="Auto"
+              HorizontalScrollBarVisibility="Disabled">
+            
+            <StackPanel>
+                <TextBlock Foreground="white" FontSize="40" HorizontalAlignment="Center">Community</TextBlock>
+
+                <!-- Кнопка добавления заметки -->
+                <Button Content="Добавить заметку"
+                HorizontalAlignment="right"
+                Margin="10 -20 20 10"
+                
+                Command="{Binding AddCommunityNoteCommand}" />
+
+                <!-- Контейнер для заметок -->
+                <ItemsControl ItemsSource="{Binding Community}">
+                    <ItemsControl.ItemsPanel>
+                        <!-- Вертикальное размещение заметок -->
+                        <ItemsPanelTemplate>
+                            <StackPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <!-- Отображение каждой заметки -->
+                            
+                            <Border BorderBrush="Gray"
+                            BorderThickness="1"
+                            Background="LightYellow"
+                            Margin="10"
+                            Width="400"
+                            Height="150">
+                                <Grid>
+                                    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                                    <TextBlock
+                                        
+                                    Text="{Binding Text}"
+                                        FontSize="15"
+                                   TextWrapping="Wrap"
+                                   Padding="0 30 0 0"
+                                   VerticalAlignment="top"> 
+                                    <i:Interaction.Behaviors>
+        <vm:DisableParentScrollOnHoverBehavior/>
+    </i:Interaction.Behaviors>
+                                           
+                                        </TextBlock> 
+</ScrollViewer>
+                                    
+                                  
+                                        
+                             
+
+                                    <TextBlock Width="400" Height="30" Background="red" VerticalAlignment="Top" HorizontalAlignment="Center"
+             Text="{Binding Nickname}"
+             FontWeight="Bold"
+             Foreground="white" FontSize="20">
+                                                                       
+                                    </TextBlock>
+                                    <Button Content="X"
+    Width="30"
+    Height="30"
+    FontWeight="Bold"
+    Foreground="White"
+    Background="DarkRed"
+    Margin="0 0 0 0"
+    HorizontalAlignment="Right"
+    VerticalAlignment="Top"
+Command="{Binding DataContext.DeleteCommunityNoteCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+    CommandParameter="{Binding}">
+                                    
+                                    <Button.Visibility>
+                                        <MultiBinding Converter="{StaticResource NicknameMatchConverter}">
+                                            <Binding Path="DataContext.Nickname" RelativeSource="{RelativeSource AncestorType=ItemsControl}" />
+                                            <Binding Path="Nickname" />
+                                        </MultiBinding>
+                                    </Button.Visibility>
+                                </Button>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+        <Button Width="40" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 30 0 0" FontSize="30"
+                Command="{Binding ScrollToTopCommand}"
+                CommandParameter="{Binding ElementName=NotesScrollViewer}">⬆</Button>
+    </Grid>
+</UserControl>

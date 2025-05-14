@@ -8,7 +8,19 @@
     <Compile Update="TEST.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\BigNote.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CommunityNoteContextMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CommunityNotes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\LogIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Notes.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Register.xaml.cs">
