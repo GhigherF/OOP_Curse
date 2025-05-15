@@ -3,32 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\baselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\baselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\canvasnotesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\canvasnotesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\base.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\base.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\base.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\base.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\notes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\notes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\communitynotes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\communitynotes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\baselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\baselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\base.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\base.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\smallnotesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\smallnotesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\notes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\notes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\communitynotes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\communitynotes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\models\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\models\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\communitynotesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\communitynotesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\obj\\Debug\\net8.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CURSE\\obj\\Debug\\net8.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\communitynotecontextmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\communitynotecontextmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\resources\\underline.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\resources\\underline.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\resources\\italic.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\resources\\italic.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\base.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\base.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\communitynotecontextmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\communitynotecontextmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,60 +95,12 @@
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\notes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\notes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\communitynotecontextmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\communitynotecontextmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\viewmodels\\communitynotesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\viewmodels\\communitynotesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\communitynotes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\communitynotes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\communitynotecontextmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\communitynotecontextmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\communitynotes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\communitynotes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\models\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\models\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\bignote.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\views\\bignote.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|solutionrelative:curse\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E44A6BF5-18CC-4718-AF13-536C7F8C3245}|CURSE\\CURSE.csproj|c:\\users\\ghigher\\desktop\\oop_curse\\curse\\curse\\views\\bignote.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -106,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,13 +126,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "BaseLogic.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\BaseLogic.cs",
               "RelativeDocumentMoniker": "CURSE\\ViewModels\\BaseLogic.cs",
               "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\BaseLogic.cs",
               "RelativeToolTip": "CURSE\\ViewModels\\BaseLogic.cs",
-              "ViewState": "AgIAAH8BAAAAAAAAAIBAwIQBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwDIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T15:59:34.353Z",
               "IsPinned": true,
@@ -132,25 +140,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 2,
               "Title": "CommunityNotes.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\CommunityNotes.xaml.cs",
               "RelativeDocumentMoniker": "CURSE\\Views\\CommunityNotes.xaml.cs",
               "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\CommunityNotes.xaml.cs",
               "RelativeToolTip": "CURSE\\Views\\CommunityNotes.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T19:10:52.324Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Base.xaml",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Base.xaml",
               "RelativeDocumentMoniker": "CURSE\\Views\\Base.xaml",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Base.xaml*",
-              "RelativeToolTip": "CURSE\\Views\\Base.xaml*",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Base.xaml",
+              "RelativeToolTip": "CURSE\\Views\\Base.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-15T12:10:48.884Z",
               "IsPinned": true,
@@ -158,7 +167,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 9,
+              "Title": "Register.xaml",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Register.xaml",
+              "RelativeDocumentMoniker": "CURSE\\Views\\Register.xaml",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Register.xaml",
+              "RelativeToolTip": "CURSE\\Views\\Register.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-11T17:39:57.851Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Notes.xaml",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Notes.xaml",
+              "RelativeDocumentMoniker": "CURSE\\Views\\Notes.xaml",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Notes.xaml",
+              "RelativeToolTip": "CURSE\\Views\\Notes.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T13:29:29.941Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CanvasNotesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\CanvasNotesViewModel.cs",
+              "RelativeDocumentMoniker": "CURSE\\ViewModels\\CanvasNotesViewModel.cs",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\CanvasNotesViewModel.cs*",
+              "RelativeToolTip": "CURSE\\ViewModels\\CanvasNotesViewModel.cs*",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAywCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T19:52:40.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "dbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Models\\dbContext.cs",
+              "RelativeDocumentMoniker": "CURSE\\Models\\dbContext.cs",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Models\\dbContext.cs",
+              "RelativeToolTip": "CURSE\\Models\\dbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAABBwBcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T21:35:34.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SmallNotesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\SmallNotesViewModel.cs",
+              "RelativeDocumentMoniker": "CURSE\\ViewModels\\SmallNotesViewModel.cs",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\SmallNotesViewModel.cs",
+              "RelativeToolTip": "CURSE\\ViewModels\\SmallNotesViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T19:52:05.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Notes.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Notes.xaml.cs",
+              "RelativeDocumentMoniker": "CURSE\\Views\\Notes.xaml.cs",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Notes.xaml.cs",
+              "RelativeToolTip": "CURSE\\Views\\Notes.xaml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAwG0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T17:40:53.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "BigNote.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\BigNote.xaml.cs",
               "RelativeDocumentMoniker": "CURSE\\Views\\BigNote.xaml.cs",
@@ -170,42 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "dbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Models\\dbContext.cs",
-              "RelativeDocumentMoniker": "CURSE\\Models\\dbContext.cs",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Models\\dbContext.cs",
-              "RelativeToolTip": "CURSE\\Models\\dbContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAzwBcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T21:35:34.847Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CommunityNoteContextMenu.xaml",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\CommunityNoteContextMenu.xaml",
-              "RelativeDocumentMoniker": "CURSE\\Views\\CommunityNoteContextMenu.xaml",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\CommunityNoteContextMenu.xaml",
-              "RelativeToolTip": "CURSE\\Views\\CommunityNoteContextMenu.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-12T19:39:11.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "LogIn.xaml",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\LogIn.xaml",
-              "RelativeDocumentMoniker": "CURSE\\Views\\LogIn.xaml",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\LogIn.xaml",
-              "RelativeToolTip": "CURSE\\Views\\LogIn.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-11T17:37:18.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "CommunityNotes.xaml",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\CommunityNotes.xaml",
               "RelativeDocumentMoniker": "CURSE\\Views\\CommunityNotes.xaml",
@@ -217,44 +269,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "CommunityNotesViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\CommunityNotesViewModel.cs",
               "RelativeDocumentMoniker": "CURSE\\ViewModels\\CommunityNotesViewModel.cs",
               "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\CommunityNotesViewModel.cs",
               "RelativeToolTip": "CURSE\\ViewModels\\CommunityNotesViewModel.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAiwCUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T19:50:57.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\Main.cs",
-              "RelativeDocumentMoniker": "CURSE\\ViewModels\\Main.cs",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\Main.cs",
-              "RelativeToolTip": "CURSE\\ViewModels\\Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4BAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T17:35:05.1Z",
+              "DocumentIndex": 12,
+              "Title": "CommunityNoteContextMenu.xaml",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\CommunityNoteContextMenu.xaml",
+              "RelativeDocumentMoniker": "CURSE\\Views\\CommunityNoteContextMenu.xaml",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\CommunityNoteContextMenu.xaml",
+              "RelativeToolTip": "CURSE\\Views\\CommunityNoteContextMenu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-12T19:39:11.173Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Register.xaml",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Register.xaml",
-              "RelativeDocumentMoniker": "CURSE\\Views\\Register.xaml",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Register.xaml",
-              "RelativeToolTip": "CURSE\\Views\\Register.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-11T17:39:57.851Z"
+              "Title": "Italic.png",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Resources\\Italic.png",
+              "RelativeDocumentMoniker": "CURSE\\Views\\Resources\\Italic.png",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Resources\\Italic.png",
+              "RelativeToolTip": "CURSE\\Views\\Resources\\Italic.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-15T13:31:40.916Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "Underline.png",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Resources\\Underline.png",
+              "RelativeDocumentMoniker": "CURSE\\Views\\Resources\\Underline.png",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Resources\\Underline.png",
+              "RelativeToolTip": "CURSE\\Views\\Resources\\Underline.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-15T13:32:07.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.g.cs",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\obj\\Debug\\net8.0-windows\\App.g.cs",
+              "RelativeDocumentMoniker": "CURSE\\obj\\Debug\\net8.0-windows\\App.g.cs",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\obj\\Debug\\net8.0-windows\\App.g.cs",
+              "RelativeToolTip": "CURSE\\obj\\Debug\\net8.0-windows\\App.g.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAA2wDMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:40:56.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LogIn.xaml",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\LogIn.xaml",
+              "RelativeDocumentMoniker": "CURSE\\Views\\LogIn.xaml",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\LogIn.xaml",
+              "RelativeToolTip": "CURSE\\Views\\LogIn.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-11T17:37:18.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\Main.cs",
+              "RelativeDocumentMoniker": "CURSE\\ViewModels\\Main.cs",
+              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\Main.cs",
+              "RelativeToolTip": "CURSE\\ViewModels\\Main.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T17:35:05.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "CommunityNoteContextMenu.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\CommunityNoteContextMenu.xaml.cs",
               "RelativeDocumentMoniker": "CURSE\\Views\\CommunityNoteContextMenu.xaml.cs",
@@ -262,12 +362,11 @@
               "RelativeToolTip": "CURSE\\Views\\CommunityNoteContextMenu.xaml.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T19:55:45.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T19:55:45.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 21,
               "Title": "Converter.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\Converter.cs",
               "RelativeDocumentMoniker": "CURSE\\ViewModels\\Converter.cs",
@@ -275,25 +374,23 @@
               "RelativeToolTip": "CURSE\\ViewModels\\Converter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T21:54:32.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T21:54:32.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
               "Title": "Base.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Base.xaml.cs",
               "RelativeDocumentMoniker": "CURSE\\Views\\Base.xaml.cs",
               "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Base.xaml.cs",
               "RelativeToolTip": "CURSE\\Views\\Base.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T12:12:31.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T12:12:31.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 22,
               "Title": "LogIn.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\LogIn.xaml.cs",
               "RelativeDocumentMoniker": "CURSE\\Views\\LogIn.xaml.cs",
@@ -301,12 +398,11 @@
               "RelativeToolTip": "CURSE\\Views\\LogIn.xaml.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T20:53:49.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T20:53:49.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\appsettings.json",
               "RelativeDocumentMoniker": "CURSE\\appsettings.json",
@@ -318,44 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Notes.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Notes.xaml.cs",
-              "RelativeDocumentMoniker": "CURSE\\Views\\Notes.xaml.cs",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Notes.xaml.cs",
-              "RelativeToolTip": "CURSE\\Views\\Notes.xaml.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAgwCEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T17:40:53.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Notes.xaml",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Notes.xaml",
-              "RelativeDocumentMoniker": "CURSE\\Views\\Notes.xaml",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\Notes.xaml",
-              "RelativeToolTip": "CURSE\\Views\\Notes.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-11T17:37:45.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\App.xaml",
-              "RelativeDocumentMoniker": "CURSE\\App.xaml",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\App.xaml",
-              "RelativeToolTip": "CURSE\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-12T20:12:26.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 16,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\App.xaml.cs",
               "RelativeDocumentMoniker": "CURSE\\App.xaml.cs",
@@ -367,33 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SmallNotesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\SmallNotesViewModel.cs",
-              "RelativeDocumentMoniker": "CURSE\\ViewModels\\SmallNotesViewModel.cs",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\SmallNotesViewModel.cs",
-              "RelativeToolTip": "CURSE\\ViewModels\\SmallNotesViewModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T19:52:05.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CanvasNotesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\CanvasNotesViewModel.cs",
-              "RelativeDocumentMoniker": "CURSE\\ViewModels\\CanvasNotesViewModel.cs",
-              "ToolTip": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\ViewModels\\CanvasNotesViewModel.cs*",
-              "RelativeToolTip": "CURSE\\ViewModels\\CanvasNotesViewModel.cs*",
-              "ViewState": "AgIAABEAAAAAAAAAAAAiwBIAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T19:52:40.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "CURSE\\Views\\MainWindow.xaml",
@@ -405,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "BigNote.xaml",
               "DocumentMoniker": "C:\\Users\\ghigher\\Desktop\\OOP_Curse\\CURSE\\CURSE\\Views\\BigNote.xaml",
               "RelativeDocumentMoniker": "CURSE\\Views\\BigNote.xaml",

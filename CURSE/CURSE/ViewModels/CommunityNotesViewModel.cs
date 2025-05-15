@@ -8,12 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace CURSE.ViewModels
 {
     public class CommunityNotesViewModel : INotifyPropertyChanged
     {
+        private string _filterText;
+        public string FilterText
+        {
+            get => _filterText;
+            set
+            {
+                if (_filterText != value)
+                {
+                    _filterText = value;
+                    OnPropertyChanged(nameof(FilterText));
+                    CommunityView.Refresh();
+                }
+            }
+        }
+        public ICollectionView CommunityView { get; }
         public string Nickname { get; set; }
         public DateTime SelectedDate { get; set; } = DateTime.Now;
         public string Text { get; set; } = string.Empty;
@@ -30,7 +46,24 @@ namespace CURSE.ViewModels
             SaveAndLoadNotesCommand = new RelayCommand<object>(SaveAndLoadNotes);
             DeleteCommunityNoteCommand = new RelayCommand<Community>(DeleteCommunityNote);
             ScrollToTopCommand = new RelayCommand<ScrollViewer>(ScrollToTop);
+            CommunityView = CollectionViewSource.GetDefaultView(Community);
+            CommunityView.Filter = FilterNotes;
             LoadCommunityNotes();
+        }
+
+        private bool FilterNotes(object obj)
+        {
+            if (obj is Community note)
+            {
+                if (string.IsNullOrWhiteSpace(FilterText))
+                    return true;
+
+                string lowerFilter = FilterText.ToLower();
+
+                return (note.Nickname != null && note.Nickname.ToLower().Contains(lowerFilter))
+                    || (note.Text != null && note.Text.ToLower().Contains(lowerFilter));
+            }
+            return false;
         }
         private void ScrollToTop(ScrollViewer scrollViewer)
         {

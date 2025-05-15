@@ -29,7 +29,7 @@ namespace CURSE.ViewModels
         {
             var newNote = new SmallNote
             {
-                Content = string.Empty,
+                DocumentXaml = string.Empty,
                 X = 0,
                 Y = 0
             };

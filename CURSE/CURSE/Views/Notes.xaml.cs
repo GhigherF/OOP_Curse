@@ -98,5 +98,15 @@ namespace CURSE.Views
                 e.Handled = true;
             }
         }
+        private void ComboBox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
+
+            ComboBox combo = (ComboBox)sender;
+            combo.IsDropDownOpen = true;
+
+            // предотвращаем потерю фокуса RichTextBox
+            FocusManager.SetFocusedElement(FocusManager.GetFocusScope(combo), Keyboard.FocusedElement);
+        }
     }
 }

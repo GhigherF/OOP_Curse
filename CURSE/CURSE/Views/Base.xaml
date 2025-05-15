@@ -5,6 +5,7 @@
             xmlns:local="clr-namespace:CURSE"
             xmlns:v="clr-namespace:CURSE.Views"
             xmlns:vm="clr-namespace:CURSE.ViewModels"
+xmlns:System = "clr-namespace:System;assembly=mscorlib"
             Title="MainWindow" Height="600" Width="800"
             WindowStyle="None" WindowStartupLocation="CenterScreen"
             ResizeMode="CanResizeWithGrip" AllowsTransparency="True"
@@ -54,15 +55,22 @@
         Cursor="Hand">
                     <Image Source="/Views/Resources/Plus.png" Width="30"/>
                 </Button>
-                <Button Content="Canvas"    
-                    Command="{Binding SwitchToCanvasCommand}"
-                   Margin="10 15 10 10 "
+                <ItemsControl ItemsSource="{Binding Canvases}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding Title}"
+                    Command="{Binding DataContext.SelectCanvasCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                    CommandParameter="{Binding}"
+                    Margin="10,5"
                     Padding="5"
                     Foreground="White"
                     Background="#3A3A3A"
                     BorderBrush="#444"
                     FontWeight="Bold"/>
-                </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
             </Border>
 
             <!-- Разделитель -->
