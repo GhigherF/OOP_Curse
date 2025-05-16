@@ -29,16 +29,20 @@ namespace CURSE.ViewModels
             get => _selectedFontSize;
             set
             {
-                if (_selectedFontSize != value)
+                _selectedFontSize = value;
+                OnPropertyChanged(nameof(SelectedFontSize));
+                Application.Current.Dispatcher.BeginInvoke(() =>
                 {
-                    _selectedFontSize = value;
-                    OnPropertyChanged(nameof(SelectedFontSize));
-
-                    ApplyFontSizeToSelectedText(_selectedFontSize);
-                }
+                    // Принудительное обновление фокуса
+                    var focusedElement = Keyboard.FocusedElement;
+                    if (focusedElement is RichTextBox rtb)
+                    {
+                        rtb.Focus();
+                    }
+                });
             }
         }
-       private void ApplyFontSizeToSelectedText(double fontSize)
+        private void ApplyFontSizeToSelectedText(double fontSize)
 {
     if (LastSelection != null && !LastSelection.IsEmpty)
     {
@@ -69,7 +73,8 @@ namespace CURSE.ViewModels
         public ICommand AddSmallNoteCommand { get; }
         public ICommand DeleteSmallNoteCommand { get; }
          public ICommand SaveDocumentCommand { get; }
-
+        public ICommand AddFontSizeCommand { get; }
+        public ICommand RemoveFontSizeCommand { get; }
 
         public CanvasNotesViewModel(NoteCanvas noteCanvas)
         {
@@ -87,6 +92,18 @@ namespace CURSE.ViewModels
             DeleteSmallNoteCommand = new RelayCommand<SmallNote>(DeleteSmallNote);
         }
 
+        private void AddFontSize()
+        {
+            // Логика добавления нового размера шрифта
+            // Например, добавить в список FontSizes
+            // Здесь можно показать диалог для ввода нового значения
+        }
+
+        private void RemoveFontSize()
+        {
+            // Логика удаления выбранного размера шрифта
+            // Убедитесь, что выбранный размер шрифта не используется
+        }
         private void ToggleBold()
         {
             if (Keyboard.FocusedElement is RichTextBox rtb)

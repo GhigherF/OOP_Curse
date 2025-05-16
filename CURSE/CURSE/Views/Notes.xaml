@@ -56,7 +56,12 @@
                 </i:Interaction.Triggers>
             </Image>
 
-
+ <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                <TextBlock Text="Размер шрифта:"    Foreground="White" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBlock Text="{Binding SelectedFontSize}"  Foreground="White" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <Button Content="+" Width="25" Height="25" Margin="0,0,5,0" Command="{Binding AddFontSizeCommand}"/>
+                <Button Content="-" Width="25" Height="25" Command="{Binding RemoveFontSizeCommand}"/>
+            </StackPanel>
 
             <Image Source="/Views/Resources/Bold.png" Margin="5"
                        Cursor="Hand">
@@ -66,16 +71,79 @@
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                 </Image>
-            <ComboBox Width="60"
-          Margin="5"
+            <ComboBox Width="60" Margin="5" Background="White"
           SelectedItem="{Binding SelectedFontSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                       IsSynchronizedWithCurrentItem="True"
-    PreviewMouseDown="ComboBox_PreviewMouseDown"
-                      IsEditable="True" StaysOpenOnEdit="True"
-                      IsTextSearchEnabled="False">
+          IsSynchronizedWithCurrentItem="True"
+          IsEditable="True"
+          StaysOpenOnEdit="True"
+          IsTextSearchEnabled="False"
+          Focusable="True">
+
+                <ComboBox.Resources>
+                    <ControlTemplate x:Key="ComboBoxToggleButtonTemplate" TargetType="ToggleButton">
+                        <Grid Background="Transparent">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="20"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Добавляем ContentPresenter для отображения выбранного значения -->
+                            <ContentPresenter Grid.Column="0" 
+                                Content="{TemplateBinding Content}"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Margin="3,0"/>
+
+                            <Path Grid.Column="1" x:Name="Arrow"
+                      Fill="Black" 
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Data="M 0 0 L 4 4 L 8 0 Z"/>
+                        </Grid>
+                    </ControlTemplate>
+                </ComboBox.Resources>
+
+                <ComboBox.Template>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton Name="ToggleButton"
+                            Template="{StaticResource ComboBoxToggleButtonTemplate}"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Focusable="True"
+                            IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, 
+                                        RelativeSource={RelativeSource TemplatedParent}}"
+                            FocusManager.IsFocusScope="True">
+
+                                <!-- Привязка содержимого -->
+                                <ToggleButton.Content>
+                                    <TextBlock Text="{Binding SelectedItem, 
+                                            RelativeSource={RelativeSource AncestorType=ComboBox}}"/>
+                                </ToggleButton.Content>
+                            </ToggleButton>
+
+                            <Popup Name="Popup"
+                      IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                      Placement="Bottom"
+                      StaysOpen="False"
+                      Focusable="True">
+                                <Border Background="White" 
+                          BorderThickness="1" 
+                          BorderBrush="Gray"
+                          SnapsToDevicePixels="True">
+                                    <ScrollViewer MaxHeight="200">
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </ComboBox.Template>
+
                 <i:Interaction.Behaviors>
-                    <vm:FontSizeBehavior />
+                    <vm:FontSizeBehavior/>
                 </i:Interaction.Behaviors>
+
                 <ComboBox.ItemsSource>
                     <x:Array Type="{x:Type sys:Double}" 
                  xmlns:sys="clr-namespace:System;assembly=mscorlib">

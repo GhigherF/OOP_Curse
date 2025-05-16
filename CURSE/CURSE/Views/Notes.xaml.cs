@@ -85,6 +85,23 @@ namespace CURSE.Views
                 scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset + (itemBottom - viewportBottom));
             }
         }
+        private void ComboBox_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            var comboBox = sender as ComboBox;
+            if (comboBox != null && !comboBox.IsDropDownOpen)
+            {
+                comboBox.IsHitTestVisible = false; // Принудительное сброс фокуса
+                comboBox.IsHitTestVisible = true;
+            }
+        }
+
+        private void ToggleButton_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Фикс двойного срабатывания
+            e.Handled = true;
+            var toggleButton = sender as ToggleButton;
+            toggleButton?.GetBindingExpression(ToggleButton.IsCheckedProperty)?.UpdateSource();
+        }
 
         private void OnPreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
